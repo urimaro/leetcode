@@ -6,7 +6,9 @@ def merge_alternately(word1, word2)
  
   result = []
   length.times do |i|
-    result.push(word1[i]).push(word2[i])
+    result.push(word1[i], word2[i])
+    # `Array#<<` は引数を1つしかとれない
+    # result << word1[i] << word2[i]
   end
   result.join("")
 end
