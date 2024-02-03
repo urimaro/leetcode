@@ -10,5 +10,5 @@ def merge_alternately(word1, word2)
     # `Array#<<` は引数を1つしかとれない
     # result << word1[i] << word2[i]
   end
-  result.join("")
+  result.join
 end
