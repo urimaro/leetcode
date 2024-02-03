@@ -6,10 +6,7 @@ def merge_alternately(word1, word2)
  
   result = []
   length.times do |i|
-    w1 = word1[i] ? word1[i] : ""
-    w2 = word2[i] ? word2[i] : ""
-
-    result.push(w1).push(w2)
+    result.push(word1[i]).push(word2[i])
   end
   result.join("")
 end
