@@ -12,15 +12,8 @@
 def max_depth(root)
   return 0 if root.nil?
 
-  left = root.left
-  right = root.right
+  left_depth = max_depth(root.left) + 1
+  right_depth = max_depth(root.right) + 1
 
-  left_count = right_count = 1
-  if left != nil
-    left_count += max_depth(left)
-  end
-  if right != nil
-    right_count += max_depth(right)
-  end
-  return left_count >= right_count ? left_count : right_count
+  return left_depth >= right_depth ? left_depth : right_depth
 end
